@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class RunnerMovement : MonoBehaviour
 {
-    public float speed=5f;
+    public float speed=7f;
     public float move;
-    public float jumpHeight=5f;
+    public float jumpHeight=10f;
     public bool isJumping;
 
     Vector2 movementVector;
@@ -23,15 +23,6 @@ public class RunnerMovement : MonoBehaviour
     {
         Vector2 runnerVelocity = new Vector2(movementVector.x*speed, rb.velocity.y);
         rb.velocity=runnerVelocity; 
-        /*move = Input.GetAxis("Horizontal");
-
-        rb.velocity = new Vector2(speed * move, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && isJumping==false)
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
-            Debug.Log("jump");
-        }*/
     }
     
 
